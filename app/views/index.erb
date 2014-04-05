@@ -1,23 +1,48 @@
 <div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+  <br>
+  <h1>Notes Manager Thingey</h1>
+  <center>
 
-  <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
+<!-- Error:: If Any -->
+  <br>
+  <% if @error_message %>
+    <%= @error_message %>
+    <br>
+  <% end %>
+  <br>
+
+<!-- Create a note -->
+  <h3>:: Create a Note ::</h3>
+  <div class="container_sml">
+
+    <%= erb :_create_note %>
+
+    <br>
+  </div>
+  </center>
+
+<!-- Viewing all Notes -->
+  <% if @notes %>
+    <% @notes.each do |note| %>
+      <%= note.title %> : <br>
+      <%= note.message %><br>
+
+      <!-- Button to Update Note -->
+      <span>
+        <a href="/notes/<%= note.id %>/update">
+          <button type="button">Update</button>
+        </a>
+      </span>
+       | 
+      <!-- Button to Delete Button -->
+      <span>
+        <a href="/notes/<%= note.id %>/delete">
+          <button type="button">Delete</button>
+        </a>
+      </span>
+      <br><hr>
+
+    <% end %>
+  <% end %>
+
 </div>
