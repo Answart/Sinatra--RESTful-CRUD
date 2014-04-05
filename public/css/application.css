@@ -1,9 +1,84 @@
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+  background-color: #88a0a0;
+}
+
+a {
+  font-size: 0.9em;
+  font-family: Verdana;
+  font-color: #406578;
+}
+
+a:visited {
+  font-color: #406578;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #999;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
 .container {
   margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  width: 800px;
+  padding: 5px 20px 20px 20px;
+  border: 0px dotted black;
+  background-color: #fffbf3;
+}
+
+th {
+  text-align: left;
+}
+
+.container_sml {
+  margin: 10px auto;
+  width: 700px;
+  padding: 5px 5px 5px 5px;
+  border: 0px dotted black;
+  background-color: white;
 }
 th {
   text-align: left;
+}
+
+
+input, textarea, select {
+  border: 1px solid #bbb;
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 15px;
+  /*margin: 0px auto;*/
+}
+
+
+.bttn {
+  margin: 5px;
+  padding: 2px;
+  font-family:Verdana;
+  font-size: 10px;
+  text-align:center;
 }
