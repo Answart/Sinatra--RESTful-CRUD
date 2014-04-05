@@ -1,0 +1,22 @@
+<div class="container">
+<h1>Updating note<br>"<%= @note.title %>"</h1><br>
+
+<h3><%= @note.title %></h3>
+<p>
+<%= @note.message %>
+</p>
+
+<hr></hr>
+
+<h4>Update this note: </h4>
+  <form action="/notes/<%= @note.id %>" method="note" id="edit_note">
+    <input type="hidden" name="_method" value="put">
+    Note Title: <input name="title" type="text" placeholder="Title" required><br>
+    Note Message: <textarea rows="7" cols="50" input name="message" placeholder="description" required></textarea><br>
+
+    <input type="submit" value="Save Changes">
+  </form>
+
+  <hr></hr>
+  <a href="/">Home Page</a>
+</div>
