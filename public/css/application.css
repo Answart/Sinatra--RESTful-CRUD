@@ -39,7 +39,7 @@ h2 {
 
 p {
   font-size: 1.1em;
-  line-height: 1.7em;
+  line-height: 1.5em;
 }
 
 .container {
@@ -61,6 +61,7 @@ th {
   border: 0px dotted black;
   background-color: white;
 }
+
 th {
   text-align: left;
 }
@@ -82,3 +83,29 @@ input, textarea, select {
   font-size: 10px;
   text-align:center;
 }
+
+.notes {
+  margin: 25px 20px;
+  padding: 10px 15px;
+}
+
+.notes h4 {
+  padding-top:5px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1em;
+  display:inline;
+}
+
+.notes p {
+  line-height: 1.4em;
+  font-size: 12px;
+}
+
+.time {
+  display:inline;
+  font-size: 9px;
+  color:grey;
+  line-height:10px;
+}
+

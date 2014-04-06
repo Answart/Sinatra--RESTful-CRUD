@@ -23,19 +23,22 @@
 
 <!-- Viewing all Notes -->
   <% if @notes %>
+    <div class="notes">
     <% @notes.each do |note| %>
-      <%= note.title %> : <br>
-      <%= note.message %><br>
+      <span><h4><%= note.title %></h4>
+
+      <div class="time">
+       | <%= note.created_at.strftime("%H minutes and %M seconds ago") %>
+       </div>
+      <span>
+      <p>"<%= note.message %>"<p>
+
 
       <!-- Button to Update Note -->
-      <span>
-        <a href="/notes/<%= note.id %>/update">
+        <a href="/notes/<%= note.id %>/edit">
           <button type="button">Update</button>
-        </a>
-      </span>
-       | 
+        </a> -
       <!-- Button to Delete Button -->
-      <span>
         <a href="/notes/<%= note.id %>/delete">
           <button type="button">Delete</button>
         </a>
@@ -43,6 +46,7 @@
       <br><hr>
 
     <% end %>
+    </div>
   <% end %>
 
 </div>
