@@ -15,7 +15,7 @@
   <h3>:: Create a Note ::</h3>
   <div class="container_sml">
 
-    <%= erb :_create_note %>
+    <%= erb :_create_js_note %>
 
     <br>
   </div>
@@ -34,14 +34,9 @@
       <p>"<%= note.message %>"<p>
 
 
-      <!-- Button to Update Note -->
-        <a href="/notes/<%= note.id %>/edit">
-          <button type="button">Update</button>
-        </a> -
-      <!-- Button to Delete Button -->
-        <a href="/notes/<%= note.id %>/delete">
-          <button type="button">Delete</button>
-        </a>
+      <!-- Button to Update Note && Button to Delete Button -->
+        <a href="/notes/<%= note.id %>/edit"><button type="button" class="bttn">Update</button></a>
+        <a href="/notes/<%= note.id %>/delete"><button type="button" class="bttn">Delete</button></a>
       </span>
       <br><hr>
 
