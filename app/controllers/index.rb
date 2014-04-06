@@ -32,12 +32,12 @@ end
 
 
 # RECEIVE FORM TO ASK CONFIRMATION ABOUT note DELETION
-# get "/notes/:note_id/delete" do
-#   @note = Note.find(params[:note_id])
-#   erb :delete_note
-# end
-# DESTROY note
 get "/notes/:note_id/delete" do
+  @note = Note.find(params[:note_id])
+  erb :delete_note
+end
+# DESTROY note
+delete "/notes/:note_id/delete" do
   @note = Note.find(params[:note_id])
   @note.destroy
   redirect "/"

@@ -1,0 +1,26 @@
+<div class="container">
+<h1>Do you want to delete the note<br>'<%= @note.title %>'?</h1><br>
+
+<h3><%= @note.title %></h3>
+<p>
+<%= @note.message %>
+</p>
+
+  <form action="/notes/<%= @note.id %>/delete" method="post" id="delete_note">
+    <input type="hidden" name="_method" value="delete">
+    <span><input type="submit" class="bttn" value="Delete">
+    <input class="bttn" type="button" onclick="window.location.replace('/')" value="Cancel" /> 
+    </span> 
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- <button type="cancel" onclick="window.location='http://stackoverflow.com'; return false;">Cancel</button> -->
